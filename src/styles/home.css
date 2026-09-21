@@ -1,0 +1,341 @@
+/* src/styles/home.css */
+
+.hero-section {
+  background-image: url('/images/hero/mountain-hero1.jpeg'); /*using the background image */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #333333;
+}
+
+/* MEDIA QUERY: Make Hero Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem; /* Shrink headline */
+  }
+  
+  .hero-content p {
+    font-size: 1rem; /* Shrink paragraph */
+  }
+  
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    padding: 0 20px;
+  }
+}
+
+/* Trek Search Section */
+.search-section {
+  padding: 0 20px;
+  margin-top: -50px; /* Pulls the search box up to overlap the hero image */
+  position: relative;
+  z-index: 10; /* Ensures it sits on top of the hero image */
+}
+
+.search-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Adds a soft drop shadow */
+}
+
+.search-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.search-form {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.form-group {
+  flex: 1; /* Makes each dropdown take up equal space */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.form-group select,
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  outline: none;
+  width: 100%;
+}
+
+.form-group input:focus {
+  border-color: #e67e22;
+}
+
+.btn-search {
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 44px; /* Matches the height of the dropdowns */
+}
+
+.btn-search:hover {
+  background-color: #1a252f;
+}
+
+/* MEDIA QUERY: Make Search Box Mobile Responsive */
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-section {
+    margin-top: -30px;
+  }
+  
+  .btn-search {
+    margin-top: 1rem;
+    height: 50px; /* Slightly taller for easier tapping on mobile */
+  }
+}
+
+
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: #f1f2f6;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.feature-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-box h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.feature-box p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+
+
+
+
+/* Reviews Section */
+.reviews-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.review-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-stars {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.review-comment {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Pushes the reviewer info to the bottom */
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.reviewer-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes the image perfectly round */
+  object-fit: cover;
+}
+
+.reviewer-details h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.reviewer-details span {
+  font-size: 0.8rem;
+  color: #e67e22;
+  font-weight: bold;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #2c3e50;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #bdc3c7;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 992px) {
+  /* Added .features-grid here for tablet view */
+  .reviews-grid, .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Added .features-grid here for mobile view */
+  .reviews-grid, .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}

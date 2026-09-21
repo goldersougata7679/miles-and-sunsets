@@ -1,0 +1,199 @@
+/* src/styles/trek.css */
+
+/* Popular Treks Section */
+.popular-treks {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* CSS Grid for placing cards side by side */
+.trek-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 2rem;
+}
+
+/* Individual Trek Card */
+.trek-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.trek-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.trek-image-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.trek-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trek-card:hover .trek-image {
+  transform: scale(1.1); /* Zoom image slightly on hover */
+}
+
+.trek-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.trek-destination {
+  color: #e67e22;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.trek-name {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.trek-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.trek-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.trek-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.btn-card {
+  background-color: #2c3e50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.btn-card:hover {
+  background-color: #e67e22;
+}
+
+/* MEDIA QUERIES for Responsive Grid */
+@media (max-width: 992px) {
+  .trek-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .trek-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+
+
+/* Treks Page Specific Styles */
+.page-header {
+  background-color: #1a252f;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.page-header p {
+  color: #bdc3c7;
+  font-size: 1.1rem;
+}
+
+.treks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap; /* Allows buttons to wrap to the next line on mobile */
+}
+
+.btn-filter {
+  background-color: #f1f2f6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-filter:hover {
+  background-color: #e67e22;
+  color: white;
+}
+
+/* This class highlights the currently selected filter */
+.btn-filter.active {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.results-count {
+  margin-bottom: 1.5rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
